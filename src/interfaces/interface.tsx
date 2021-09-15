@@ -26,17 +26,14 @@ export interface IProduct {
 export interface IProps {
   navigation: NativeStackNavigationProp<
     RootStackParamList,
-    RoutesConstants.HOME_SCREEN
+    RoutesConstants.SPLASH_SCREEN
   >;
 }
 
-// export interface IPdpProps {
-//   navigation: NativeStackNavigationProp<
-//     RootStackParamList,
-//     RoutesConstants.PRODUCT_DETAILS_SCREEN
-//   >;
-// }
-
 export interface IProductCardProps {
   product: IProduct;
+}
+
+export interface IProductListProps {
+  products: Array<IProduct>;
 }

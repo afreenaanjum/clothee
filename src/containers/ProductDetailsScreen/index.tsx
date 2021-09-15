@@ -1,6 +1,6 @@
 import {RouteProp, useRoute} from '@react-navigation/native';
 import React from 'react';
-import PDPScreen from '../../components/PDPScreen';
+import PDPScreen from '../../components/PDP';
 import {RootStackParamList} from '../../navigation/RouteStackParamList';
 import {RoutesConstants} from '../../utils/RouteEnums';
 

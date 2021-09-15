@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
-import {Text, StyleSheet, ActivityIndicator} from 'react-native';
+import {Text, StyleSheet} from 'react-native';
 import {RoutesConstants} from '../../utils/RouteEnums';
-import Container from '../../components/Container';
 import {IProps} from '../../interfaces/interface';
+import Center from '../../components/Center';
 
 const SplashScreen: React.FC<IProps> = ({navigation}: IProps) => {
   useEffect(() => {
@@ -12,18 +12,15 @@ const SplashScreen: React.FC<IProps> = ({navigation}: IProps) => {
   }, [navigation]);
 
   return (
-    <Container style={styles.splashScreen}>
+    <Center style={styles.splashScreen}>
       <Text style={styles.appName}>CLOTHEE</Text>
-      <ActivityIndicator />
-    </Container>
+    </Center>
   );
 };
 
 const styles = StyleSheet.create({
   splashScreen: {
     backgroundColor: '#FF1696',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   appName: {fontSize: 50, fontWeight: '600'},
 });
