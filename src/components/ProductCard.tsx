@@ -5,7 +5,7 @@ import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import {IProductCardProps} from '../interfaces/interface';
 import {RootStackParamList} from '../navigation/RouteStackParamList';
 import {RoutesConstants} from '../utils/RouteEnums';
-import Container from './Container';
+import Container from './Container/Container';
 
 const ProductCard: React.FC<IProductCardProps> = ({
   product,
@@ -46,7 +46,7 @@ const ProductCard: React.FC<IProductCardProps> = ({
             />
           </View>
         </Container>
-        <Text>{product.PRICE}</Text>
+        <Text>{product?.PRICE ?? ''}</Text>
       </TouchableOpacity>
     </Container>
   );

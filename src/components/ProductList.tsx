@@ -2,7 +2,7 @@ import React from 'react';
 import {FlatList, StyleSheet, Text} from 'react-native';
 import ProductCard from './ProductCard';
 import {IProductListProps, IProduct} from '../interfaces/interface';
-import Center from './Center';
+import Center from './Center/Center';
 
 const ProductList: React.FC<IProductListProps> = ({
   products,

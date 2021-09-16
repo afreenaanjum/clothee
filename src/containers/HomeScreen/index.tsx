@@ -1,7 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import {ActivityIndicator} from 'react-native';
-import Center from '../../components/Center';
-import Container from '../../components/Container';
+import Center from '../../components/Center/Center';
+import Container from '../../components/Container/Container';
 import ProductList from '../../components/ProductList';
 import SearchBar from '../../components/SearchBar';
 import {IProduct} from '../../interfaces/interface';

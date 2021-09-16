@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {IContainerProps} from '../interfaces/interface';
+import {IContainerProps} from '../../interfaces/interface';
 const Container: React.FC<IContainerProps> = ({
   children,
   style,

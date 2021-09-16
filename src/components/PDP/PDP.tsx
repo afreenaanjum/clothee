@@ -1,14 +1,14 @@
 import React from 'react';
 import {StyleSheet, Text, Image, ActivityIndicator} from 'react-native';
-import {IProductCardProps} from '../interfaces/interface';
-import Container from './Container';
+import {IProductCardProps} from '../../interfaces/interface';
+import Container from '../Container/Container';
 
 const PDP: React.FC<IProductCardProps> = ({product}: IProductCardProps) => {
   return (
     <Container style={styles.card}>
       <Container style={styles.imageContainer}>
         <Image
-          source={{uri: product.IMAGE, cache: 'force-cache'}}
+          source={{uri: product?.IMAGE, cache: 'force-cache'}}
           onProgress={() => <ActivityIndicator />}
           resizeMode="contain"
           style={styles.h100}
@@ -16,10 +16,12 @@ const PDP: React.FC<IProductCardProps> = ({product}: IProductCardProps) => {
       </Container>
       <Container>
         <Text numberOfLines={2} ellipsizeMode="tail" style={styles.productName}>
-          {product.NAME}
+          {product?.NAME ?? ''}
         </Text>
-        <Text style={styles.productPrice}>Rs {product.PRICE}</Text>
-        <Text style={styles.productDes}>{product['DESCRIPTION & COLOR']}</Text>
+        <Text style={styles.productPrice}>Rs {product?.PRICE}</Text>
+        <Text style={styles.productDes}>
+          {(product && product['DESCRIPTION & COLOR']) ?? ''}
+        </Text>
       </Container>
     </Container>
   );

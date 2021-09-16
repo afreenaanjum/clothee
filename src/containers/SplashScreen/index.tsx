@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {Text, StyleSheet} from 'react-native';
 import {RoutesConstants} from '../../utils/RouteEnums';
 import {IProps} from '../../interfaces/interface';
-import Center from '../../components/Center';
+import Center from '../../components/Center/Center';
 
 const SplashScreen: React.FC<IProps> = ({navigation}: IProps) => {
   useEffect(() => {
